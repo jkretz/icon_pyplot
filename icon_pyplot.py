@@ -4,11 +4,12 @@ from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 import matplotlib.tri as tri
 
-from matplotlib import rc
-rc('text', usetex=True)
-rc('font', size=40)
-rc('legend', fontsize=9)
-rc('text.latex', preamble=r'\usepackage{cmbright}')
+# some pdf viewers have problems with matplotlib plot. If so, use the commented lines below
+# from matplotlib import rc
+# rc('text', usetex=True)
+# rc('font', size=40)
+# rc('legend', fontsize=9)
+# rc('text.latex', preamble=r'\usepackage{cmbright}')
 
 ipath = 'data/'
 ifile_var = 'test_var.nc'
