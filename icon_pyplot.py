@@ -14,17 +14,6 @@ ipath = 'data/'
 ifile_var = 'test_var.nc'
 ifile_grid = 'test_grid_DOM01.nc'
 
-
-def create_triagulation_triangles(ifile_grid_in):
-    f_grid = Dataset(ifile_grid_in, 'r')
-    triangles = np.swapaxes(f_grid.variables['vertex_of_cell'][:]-1, 0, 1)
-    vlon, vlat = np.degrees(f_grid.variables['vlon'][:]), np.degrees(f_grid.variables['vlat'][:])
-    triang_out = tri.Triangulation(vlon, vlat, triangles)
-    return triang_out
-
-
-triang = create_triagulation_triangles(ipath+ifile_grid)
-
 # read in data
 var_string = 't_2m'
 f_var = Dataset(ipath+ifile_var, 'r')
