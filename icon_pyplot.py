@@ -52,7 +52,7 @@ def create_triagulation_smooth(ifile_grid_in):
 
 triang = create_triagulation_smooth(ipath+ifile_grid)
 level = np.linspace(265, 285, 50)
-plt.tricontourf(triang, var, levels=level)
+plt.tricontourf(triang, np.array(var), levels=level)
 cbar = plt.colorbar(fraction=0.036, )
 cbar.ax.tick_params(labelsize=30)
 plt.show()
